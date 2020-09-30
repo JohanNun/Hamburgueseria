@@ -243,98 +243,6 @@ header nav ul li .activo {
 
 
 
- /* Principio section 1 */
-
-/*  .about .container {
-     padding: 20px 10px;
- }
-
-div> .fa-cogs, .fa-truck, .fa-heart {
-    color: var(--color-principal);
-    border: 2px solid var(--color-principal);
-    font-size: 2em;
-    padding: 13px;
-    margin-bottom: 10px;
- }
-
- div .fa-truck {
-     transform: scaleX(-1);
- }
- 
-.about h2 {
-    font-family: var(--fuenteSecundaria);
-    font-size: 2.5em;
-}
-
-.about h2 span:first-child {
-    color: black;
-}
-
-.about h2 span:last-child {
-    color: var(--color-principal);
-}
-
-.linea {
-    width: 41%;
-    height: 0.150em;
-    background-color: var(--color-principal);
-    margin: auto;
-    margin-top: 0.5em;
-    position: absolute;
-    top: 40px;
-    left: 55px;
-}
-
-.linea2 {
-    width: 5%;
-    height: 0.2em;
-    background-color:var(--color-principal); 
-    transform: rotate(45deg);
-    position: absolute;
-    top: 48px;
-    left: 95px; 
-}
-
-.linea3 {
-    width: 5%;
-    height: 0.2em;
-    background-color: var(--color-principal);
-    transform: rotate(135deg);
-    position: absolute;
-    top: 48px;
-    left: 95px;
-}
-
-.titu {
-    width: 50%;
-    height: 8em;
-    margin: auto;
-    position: relative;
-}
-
-section h3 {
-    font-family: var(--fuentePrincipal);
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-section .boton {
-    background-color: white;
-    color: var(--color-principal);
-    padding-left: 0;
-    padding-top: 0;
-    padding-bottom: 30px;
-    border: none; 
-    border-bottom: 1px solid var(--color-secundario);
-    width: 100%;
-    margin-bottom: 2em;
-    
-} */
-
- /* Fin section 1 */
-
 
  /* Solucion section 1  */
  main section {
@@ -478,5 +386,67 @@ main #aboutus .columna:last-child {
 }
 
 
-
 /* Fin main section about us */
+
+
+
+/* Principio Blog */
+
+main #blog {
+    margin-bottom: 2em;
+}
+
+main #blog .row {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+}
+
+main #blog article {
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 2em; 
+    position: relative;  
+}
+
+main #blog article:last-child {
+    margin-left: 1em;
+}
+
+/* Cambio de eje para posicionar bien el div respecto a la imagen */
+main #blog article div {
+    background-color: var(--color-principal);
+    opacity: 0.7;
+    color: white;
+    width: 33%;
+    height: 15%;
+    text-align: center;
+    font-weight: 550;
+    padding: 0.725em 0.725em 0.725em 0.725em;
+    position: absolute;
+    top: 0px;
+}
+
+/* Al estar centrado respecto a la imagen del article, hay que añadir margen en los lados de cada elemento del texto */
+main #blog article h3 {
+    margin: 1em 0.800em;
+    font-weight: 700;
+}
+
+main #blog article h4 {
+    margin: 1em 0.800em;
+    color: var(--color-principal);
+    font-weight: 550;
+}
+
+main #blog article p {
+    margin: 0 0.800em;
+}
+
+/* Tenemos que hacer un overwrite del .enlace para añadirle margen en los lados que no tiene en otras sections */
+main #blog article .enlace {
+    margin: 1.200em 0.800em;
+}
+
+
+/* Fin Blog */
