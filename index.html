@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Los 2 contenedores de arriba -->
+    <header>
+
+        <div class="navtop">
+            <!-- 1er contenedor -->
+
+            <div class="container row">
+                <!-- El container encorseta los botones -->
+
+                <div>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span>rover@gmail.com</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <i class="fas fa-phone"></i>
+                        <span>91 456 78 43</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Shopping cart</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 2ndo contenedor -->
+        <nav>
+            <div class="container row">
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpg" alt="rovers hamburgueseria logo">
+                    </a>
+                </div>
+
+                <div class="hamburgesa">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <ul>
+                    <li><a class="activo" href="">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Item4</a></li>
+                    <li><a href="">Contacto</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hero">
+        <div class="container">
+            <h1>Las mejores hamburguesas del mundo</h1>
+            <h2>Bienvenido a nuestra hamburguesería</h2>
+            <p>Come a partir de 15€</p>
+
+            <!-- ponemos una clase boton al a porque luego se repite varias veces en la pagina -->
+            <div>
+                <a href="" class="boton">Nuestra carta <i class="fas fa-long-arrow-alt-right"></i> </a>
+            </div>
+
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <main>
+
+        <!-- <div class="about">
+
+            <div class="container row">
+
+                <section>
+
+                    <div class="titu">
+                        <h2> <span>Our</span> <span>Services</span></h2>
+                        <div class="linea"></div>
+                        <div class="linea2"></div>
+                        <div class="linea3"></div>
+                    </div>
+
+                    <div>
+                        <div> <i class="fas fa-cogs"></i> </div>
+                        <h3>1. Titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magni?</p>
+
+                        <div><a href="#" class="boton">Leer más<i class="fas fa-long-arrow-alt-right"></i></a></div>
+                    </div>
+
+                    <div>
+                        <div> <i class="fas fa-truck"></i> </div>
+                        <h3>2. Titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magni?</p>
+
+                        <div><a href="#" class="boton">Leer más<i class="fas fa-long-arrow-alt-right"></i></a></div>
+                    </div>
+
+                    <div>
+                        <div> <i class="fas fa-heart"></i> </div>
+                        <h3>3. Titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magni?</p>
+
+                        <div><a href="#" class="boton">Leer más<i class="fas fa-long-arrow-alt-right"></i></a></div>
+                    </div>
+
+
+                </section>
+            </div>
+        </div> -->
+
+
+
+
+        <!-- resolucion Section 1 -->
+
+        <section id="ourservices" class="container">
+            <!-- Como el fondo de la section es blanco y encorsetado, no hace falta tener otro div dentro con la class "container", se aplica directamente a la section  -->
+
+            <h2>Our <span>Services</span> </h2> <!-- h2 es elemento en bloque y span es un elemento en linea -->
+            <div class="underline">
+                <hr noshade=""> <!-- El atributo no shade sirve para quitar el shade al borde -->
+                <span>X</span>
+            </div>
+
+            <div class="row">
+                <!-- al tener esa clase row con un sistema flexible aplicado, los 3 articles se van a poner automaticamente en una linea -->
+                <article>
+                    <div>
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>1. Titulo del servicio</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quisquam qui aut commodi vel
+                        maxime!</p>
+
+                    <a href="#" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+
+                </article>
+
+                <article>
+                    <div>
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>1. Titulo del servicio</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quisquam qui aut commodi vel
+                        maxime!</p>
+
+                    <a href="#" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+
+                </article>
+
+                <article>
+                    <div>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>1. Titulo del servicio</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quisquam qui aut commodi vel
+                        maxime!</p>
+
+                    <a href="#" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+
+                </article>
+            </div>
+        </section>
+
+
+
+        <section id="aboutus" class="container">
+            <h2>About <span>Us</span> </h2> <!-- h2 es elemento en bloque y span es un elemento en linea -->
+            <div class="underline">
+                <hr noshade=""> <!-- El atributo no shade sirve para quitar el shade al borde -->
+                <span>X</span>
+            </div>
+
+            <div class="row">
+                <article class="row">
+                    <div class="columna">
+                        <div class="marco">
+                            <img src="./images/about-main.jpg" alt="nuestro chef">
+                        </div>
+                    </div>
+
+                    <div class="columna">
+                        <h3>The history</h3>
+                        <h4>Our restaurant</h4>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate praesentium
+                            aliquam hic temporibus minima rerum unde sint, tempora omnis.</p>
+
+                        <div>
+                            <a href="" class="boton">Leer más <i class="fas fa-long-arrow-alt-right"></i> </a>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <footer>
+
+        <div class="container">
+            <p>Copyright &copy; 2020 - <a href="#">Aviso Legal</a>-<a href="#">Cookies</a> </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

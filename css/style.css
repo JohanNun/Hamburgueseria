@@ -1,0 +1,482 @@
+@import url(reset.css);
+
+/* handlee y montserrat fonts 400, 700
+Para usar:
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/* iconos */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-principal: #fa573a; 
+    --color-secundario: #21242e; 
+    --gris: #aaa; 
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
+    --anchoMaximo: 1100px; 
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+} /* Sirve para el sistema flexible */
+
+
+/* Hasta este punto (salvo el root que puede variar segun el proyecto), siempre e pone todo lo de arriba en un proyecto responsive */
+
+
+/* header */
+header .navtop {
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+}
+
+header .navtop a {
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+}
+
+header .navtop a span {
+    display: none;
+} /* maqueteando en mobile first */
+
+header .navtop a i {
+    color: var(--color-principal);
+}
+
+header .navtop .row {
+    justify-content: space-between;
+}
+
+
+
+/* 2ndo contenedor */
+header nav {
+    padding: 20px 10px;
+}
+
+header .hamburgesa {
+    width: 50px;
+    cursor: pointer;
+}
+
+header .hamburgesa div {
+    border-top: 2px solid var(--gris);
+    margin: 9px;
+}
+
+header nav .row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul {
+    width: 100%;
+}
+
+header nav .logo {
+    max-width: 110px;
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    color: var(--gris);
+    border-bottom: 1px solid var(--gris);
+}
+
+header nav ul li a:hover {
+    color: var(--color-principal);
+}
+
+header nav ul li .activo {
+    color: var(--color-principal);
+}
+
+@media(min-width: 48em) {
+    header .navtop a span {
+        display: inline;
+    }
+}
+
+@media(min-width: 62.750em) {
+    header .hamburgesa {
+        display: none;
+    }
+
+    header nav ul {
+        width: auto; 
+    }
+
+    header nav ul li {
+        display: inline-block;
+    }
+
+    header nav ul li a {
+        padding: 5px 20px;
+        border-bottom: none;
+    }
+}
+
+/* fin header
+ */
+
+
+ /* Inicio footer */
+
+ footer {
+     background-color: var(--color-secundario);
+     padding: 20px 10px;
+     color: white;
+     text-align: center;
+     position: fixed;
+     width: 100%;
+     margin-top: 20px;
+     bottom: 0px;
+ } /* porque en mobile, el texto está centrado. El margin-top para que se separe un poco del contenido de arriba. El bottom: 0px es para que se ponga al bajo de todo */
+
+ footer a {
+     color: white;
+ }
+
+ footer a:hover {
+     text-decoration: none;
+ }
+
+ @media(min-width: 48em) {
+     footer {
+         text-align: left;
+     }
+ }
+ /* Fin footer */
+
+
+
+
+ /* Inicio hero */
+
+ .hero {
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #999;
+    background-blend-mode: multiply; /* el color + el blend-mode para oscurecer la imagen */
+    padding: 15% 10px; /* El 15% para arriba y abajo. Los 10px para que haya un margen de lado igual al resto de la pagina. */
+ }
+
+ .hero h1 {
+     font-family: var(--fuenteSecundaria);
+     color: white;
+     font-size: 250%;
+ }
+
+ .hero h2 {
+     color: var(--color-principal);
+     font-size: 1.5em;
+     margin: 1em 0;
+ }
+
+ .hero p {
+     color: white;
+     font-size: 1.10em;
+ }
+
+ /* Aqui no vamos a usar herencia para el boton, ya que se va a utilizar en otras partes */
+ .boton {
+     display: inline-block;
+     background-color: var(--color-principal);
+     color: white;
+     padding: 1.15em;
+     text-decoration: none;
+     margin: 1em 0;
+     border: 1px solid var(--color-principal); /* Aqui se pone el border en vez de ponerlo en el hover para que luego no haya salto en el hover */
+ }
+
+ .boton:hover {
+     background-color: transparent;
+     color: var(--color-principal);
+ }
+
+.boton i {
+    transition: 0.5s; /* La duracion de la transition se pone aquí para que se haga de entrada y salida (Si se pone en el boton:hover i, la flecha se mueve hacia la derecha cuando vayamos con el raton, pero no vuelve hacia la izquierda con la misma transition cuando quitamos el raton */
+}
+
+ .boton:hover i {
+     transform: translateX(5px);
+ }
+
+ .hero ul li{
+     display: inline-block;
+     font-size: 2em;
+     margin-right: 1em;
+ }
+
+ .hero ul li a {
+     color: white;
+ }
+
+ /* Fin hero */
+
+
+
+ /* Principio section 1 */
+
+/*  .about .container {
+     padding: 20px 10px;
+ }
+
+div> .fa-cogs, .fa-truck, .fa-heart {
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+    font-size: 2em;
+    padding: 13px;
+    margin-bottom: 10px;
+ }
+
+ div .fa-truck {
+     transform: scaleX(-1);
+ }
+ 
+.about h2 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.5em;
+}
+
+.about h2 span:first-child {
+    color: black;
+}
+
+.about h2 span:last-child {
+    color: var(--color-principal);
+}
+
+.linea {
+    width: 41%;
+    height: 0.150em;
+    background-color: var(--color-principal);
+    margin: auto;
+    margin-top: 0.5em;
+    position: absolute;
+    top: 40px;
+    left: 55px;
+}
+
+.linea2 {
+    width: 5%;
+    height: 0.2em;
+    background-color:var(--color-principal); 
+    transform: rotate(45deg);
+    position: absolute;
+    top: 48px;
+    left: 95px; 
+}
+
+.linea3 {
+    width: 5%;
+    height: 0.2em;
+    background-color: var(--color-principal);
+    transform: rotate(135deg);
+    position: absolute;
+    top: 48px;
+    left: 95px;
+}
+
+.titu {
+    width: 50%;
+    height: 8em;
+    margin: auto;
+    position: relative;
+}
+
+section h3 {
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+section .boton {
+    background-color: white;
+    color: var(--color-principal);
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
+    border: none; 
+    border-bottom: 1px solid var(--color-secundario);
+    width: 100%;
+    margin-bottom: 2em;
+    
+} */
+
+ /* Fin section 1 */
+
+
+ /* Solucion section 1  */
+ main section {
+     padding: 2.125em 0.825em;
+ } /* Así el padding se va a aplicar a todas las sections del main */
+
+ main section h2 {
+     color: black;
+     font-family: var(--fuenteSecundaria);
+     font-size: 2em;
+     text-align: center;
+ }
+
+ main section h2 span {
+     color: var(--color-principal);
+ }
+
+ main section .underline {
+     position: relative;
+     width: 5em;  /* Al ponerle un width, la linea se va a colocar en la izquierda */
+     margin: 0 auto;  /* Con el margen 0 auto, se centra */
+     color: var(--color-principal);
+     font-weight: 700;  /* Para hacer la linea más gruesa */
+     margin-bottom: 2em;
+     text-align: center;
+ }
+
+ main section .underline hr {
+     position: absolute;  /* Cambiamos el eje y la capa, la linea se queda abajo de la caja, entonces no se ve */
+     width: 100%; /* Poniendole el width ocupa todo el espacio de la caja y así ya no se esconde la linea */
+     top: -0.062em; 
+     border-color: var(--color-principal);
+ }
+
+ /* Aplicamos a todos los sistemas flexibles(.row) a la section #ourservices solamente, así no se van a aplicar a las otras sectiones  */
+ main #ourservices .row {
+     flex-wrap: wrap; /* Así los 3 articles se ponen por debajo el uno del otro */
+}
+
+main #ourservices article {
+    border-bottom: 1px solid var(--gris);
+    padding: 1.825em 0;
+}
+
+main #ourservices article div i {
+    color: var(--color-principal);
+    font-size: 2em;
+    border: 2px solid var(--color-principal);
+    padding: 0.8rem; /* El padding hereda y se suma al de font-size, para que no hereda se pone en "rem" en vez de "em" */ 
+}
+
+main #ourservices article h3 {
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--color-principal);
+    margin-top: 1em;
+    display: block; /* Porque el a es un elemento en linea, si se pone en bloque, se aplica en margin */
+}
+
+@media(min-width: 48em) {
+     
+    main #ourservices article {
+        width: 50%;
+        border-bottom: 0px;
+        border-left: 1px solid var(--gris);
+        padding: 1.825em;
+        margin-bottom: 1em;
+    }
+
+    main #ourservices article:last-child {
+        width: 100%;
+    }
+}
+
+@media(min-width: 62.750em) {
+
+    main #ourservices article, main #ourservices article:last-child{
+        width: 33.333%;  /* Aquí se puede poner exactamente 33.333% gracias al box-sizing. Si no lo tuvieramos, tendría que haber restado los paddings */
+    }
+}
+
+/* fin main section ourservices */
+
+
+
+
+/* Inicio main section about us */
+
+main #aboutus {
+    padding-bottom: 70px;
+}
+
+main #aboutus .row {
+    flex-wrap: wrap;
+}
+
+main #aboutus h3 {
+    font-weight: 700;
+}
+
+main #aboutus h4 {
+    margin: 1em 0;
+    color: var(--color-principal);
+}
+
+main #aboutus .marco {
+    margin: 15px 0; /* Esto genera un espacio en blanco */
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%; /* Para evitar que la imagen se ponga en el texto */
+    transition: 1s; /* Ponemos el transition aqui para que se haga en los 2 sentidos, clickeando y quitando el raton */
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s; /* Se pone la transition aquí también para hacer el efecto optico */
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover .marco img {
+    transform: rotateZ(0deg);
+}
+
+
+@media(min-width: 48.000em) {
+
+main #aboutus .marco {
+    margin: 0 15px; /* Esto genera un espacio en blanco */
+    margin-bottom: 70px;
+}
+main #aboutus .columna:first-child {
+    width: 40%;
+}
+
+main #aboutus .columna:last-child {
+    width: 60%;
+}
+}
+
+
+
+/* Fin main section about us */
