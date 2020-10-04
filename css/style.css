@@ -469,3 +469,92 @@ main #blog article .enlace {
     }
 }
 /* Fin Blog */
+
+
+
+
+/* Principio Menu */
+ 
+main {
+    background-color: var(--color-secundario);
+    margin: 0 auto;
+    padding: 1.825em;
+}
+
+
+main #menu h2{
+    color: white;
+}
+
+main #menu aside ul {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+main #menu aside ul li {
+    margin: 1em auto;
+}
+
+main #menu aside ul li a {
+    color: white;
+    text-decoration: none; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 65vw;
+    padding-left: 10px;
+}
+
+main #menu aside ul a:hover{
+    background-color: var(--color-principal);
+    border-radius: 4px;
+}
+
+main #menu h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+main #menu .under hr {
+    border-color: var(--color-principal);
+    width: 3em;
+    font-weight: 700;
+    display: inline-block;
+}
+
+main #menu p {
+    color: white;
+    font-size: 0.825em;
+}
+
+main #menu .row {
+    flex-wrap: wrap;
+}
+
+main #menu article {
+    border-bottom: 1px solid var(--gris);
+    padding: 1.825em 0;
+    margin-left: 1.825em;
+    border-bottom: 0px;
+}
+
+main #menu img {
+    width: 93%;
+}
+
+main #menu article h3 {
+    margin-top: 1em;
+    font-size: 0.850em;
+    font-weight: 800;
+}
+
+main #menu article .precio {
+    color: var(--color-principal);
+    position: relative;
+    top: -19px;
+    left: 310px;
+}
+
+main #menu article .enlace {
+    margin-top: 1.500em;
+}
+/* Fin Menu */
