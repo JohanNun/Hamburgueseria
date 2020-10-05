@@ -492,16 +492,15 @@ main #menu aside ul {
 }
 
 main #menu aside ul li {
-    margin: 1em auto;
+    margin: 0.200em auto;
 }
 
-main #menu aside ul li a {
+main #menu aside ul a {
     color: white;
     text-decoration: none; 
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 65vw;
-    padding-left: 10px;
+    padding: 10px 25px 10px 12px;
+    width: 100%;
+    display: block;
 }
 
 main #menu aside ul a:hover{
