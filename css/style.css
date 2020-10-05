@@ -540,20 +540,195 @@ main #menu img {
     width: 93%;
 }
 
+main #menu article .cont {
+    display: inline-block;
+    width: 90%;
+    padding: 0 auto;
+}
+
 main #menu article h3 {
     margin-top: 1em;
     font-size: 0.850em;
     font-weight: 800;
 }
 
-main #menu article .precio {
+.cont .precio {
     color: var(--color-principal);
-    position: relative;
-    top: -19px;
-    left: 310px;
+    float: right;
+    padding-top: 12px;
 }
+
 
 main #menu article .enlace {
     margin-top: 1.500em;
 }
+
+
+
+@media(min-width: 48.000em){
+
+    main {
+        height: 100vh;
+        margin-bottom: 50px;
+    }
+
+    main #menu aside {
+        width: 30%;
+        padding-bottom: 50px;
+    }
+
+    main #menu .description p {
+        display: block;
+        width: 30%;
+        letter-spacing: 0.5px;
+    }
+
+    main #menu .row {
+        width: 65%;
+        float: right;
+        position: absolute;
+        padding-left: 100px;
+        top: 545px;
+        left: 140px;
+    }
+
+    main #menu .row img{
+        width: 20%;
+        height: auto;
+        position: absolute;
+        margin: 0 auto;
+        top: 38px;
+        left: 40px;
+    }
+ 
+    main #menu article {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        position: absolute;
+        margin: 0 auto;
+    }
+
+    main #menu article:nth-child(2){
+        position: absolute;
+        top: 150px;
+    }
+
+    main #menu article:last-child {
+        position: absolute;
+        top: 300px;
+    }
+
+
+   .row .cont{
+       width: 100%;
+        padding-left: 165px;
+        position: absolute;
+        top: 25px;
+    }
+
+
+    @media(min-width: 62.750em){
+
+        main {
+            height: 115vh;
+        }
+
+        main #menu .row {
+            width: 90%;
+            position: absolute;
+            top: 545px;
+            left: -10px;
+        }
+    
+        main #menu .row img{
+            width: 18%;
+            height: auto;
+            position: absolute;
+            margin: 0 auto;
+            top: -260px;
+            left: 300px;
+        }
+     
+        main #menu article {
+            width: 100%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            position: absolute;
+            margin: 0 auto;
+        }
+    
+        main #menu article:nth-child(2){
+            position: absolute;
+            top: 150px;
+        }
+    
+        main #menu article:last-child {
+            position: absolute;
+            top: 300px;
+        }
+    
+       .row .cont{
+           width: 100%;
+           padding-left: 485px;
+           position: absolute;
+           top: -270px;
+
+        }
+    } 
+
+
+
+    @media(min-width: 87.500em){
+
+        main {
+            height: 105vh;
+        }
+
+        main #menu .row {
+            width: 70%;
+            position: absolute;
+            top: 550px;
+            left: 170px;
+        }
+    
+        main #menu .row img{
+            width: 15%;
+            height: auto;
+            position: absolute;
+            margin: 0 auto;
+            top: -260px;
+            left: 300px;
+        }
+     
+
+    } 
+
+
+
+    @media(min-width: 156.250em){
+
+        main {
+            height: 100vh;
+        }
+
+        main #menu .row {
+            width: 40%;
+            position: absolute;
+            top: 545px;
+            left: 800px;
+        }
+    
+        main #menu .row img{
+            width: 7%;
+            height: auto;
+            position: absolute;
+            margin: 0 auto;
+            top: -260px;
+            left: 300px;
+        }
+     
+    } 
+
+    
 /* Fin Menu */
